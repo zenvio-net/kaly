@@ -26,8 +26,8 @@ public class KalyMessageUpdateEvent extends ListenerAdapter {
                 .addField("Channel", message.getChannel().getAsMention(), true)
                 .addBlankField(true)
                 .addField("Message ID", message.getId(), true)
-                .addField("Original Message", message.getContentRaw(), true)
-                .addField("Edited Message", event.getMessage().getContentRaw(), true)
+                .addField("Message", String.format("```\n%s\n```", message.getContentRaw()), true)
+                .addField("Message", String.format("```\n%s\n```", event.getMessage().getContentRaw()), true)
                 .setFooter("Made by qlick", "https://raw.githubusercontent.com/qlick/.github/main/assets/Logo.png")
                 .build();
 

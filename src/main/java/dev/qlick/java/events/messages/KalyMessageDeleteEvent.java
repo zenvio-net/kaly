@@ -25,7 +25,7 @@ public class KalyMessageDeleteEvent extends ListenerAdapter {
                 .addField("Author", message.getAuthor().getAsMention(), true)
                 .addField("Channel", message.getChannel().getAsMention(), true)
                 .addBlankField(true)
-                .addField("Message", message.getContentRaw(), true)
+                .addField("Message", String.format("```\n%s\n```", message), true)
                 .addField("Message ID", message.getId(), true)
                 .setFooter("Made by qlick", "https://raw.githubusercontent.com/qlick/.github/main/assets/Logo.png")
                 .build();

@@ -19,6 +19,10 @@ dependencies {
     implementation "org.apache.commons:commons-lang3:3.5"
 }
 
+shadowJar {
+    archiveFileName = "Kaly.jar"
+}
+
 application {
     mainClass = "dev.qlick.java.Kaly"
 }

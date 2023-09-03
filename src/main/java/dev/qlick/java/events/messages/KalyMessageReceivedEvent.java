@@ -26,7 +26,7 @@ public class KalyMessageReceivedEvent extends ListenerAdapter {
                 .addField("Author", event.getAuthor().getAsMention(), true)
                 .addField("Channel", event.getChannel().getAsMention(), true)
                 .addBlankField(true)
-                .addField("Message", message, true)
+                .addField("Message", String.format("```\n%s\n```", message), true)
                 .addField("Message ID", event.getMessageId(), true)
                 .setFooter("Made by qlick", "https://raw.githubusercontent.com/qlick/.github/main/assets/Logo.png")
                 .build();
